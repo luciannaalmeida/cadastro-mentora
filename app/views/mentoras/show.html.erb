@@ -1,0 +1,12 @@
+<h3>Nome: </h3> 
+<%= @mentora.nome %>
+<hr>
+<h3>Email: </h3> 
+<%= @mentora.email %>
+<hr>
+<h3>Habilidades: </h3> 
+<%= @mentora.habilidades %>
+<hr>
+<%= link_to "Editar", edit_mentora_path(@mentora) %>
+<%= link_to "Remover", mentora_path(@mentora),  data: {turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+<%= link_to "Voltar", mentoras_path %>

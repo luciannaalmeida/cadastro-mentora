@@ -1,0 +1,13 @@
+<h1> Mentoras </h1>
+<%= link_to "Adicionar mentora", new_mentora_path %>
+
+<% @mentoras.each do |mentora| %>
+  
+  <hr>
+  <%= link_to mentora.nome, mentora_path(mentora) %>
+  <%= link_to "Visualizar", mentora_path(mentora) %>
+  <%= link_to "Editar", edit_mentora_path(mentora) %>
+  <%= link_to "Remover", mentora_path(mentora),  data: {turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+
+
+<% end %>

@@ -1,0 +1,19 @@
+<h2>Editar</h2>
+  <%= form_with(model: @mentora, local: true) do |form| %>
+    <div>
+      <%= form.label :nome, "Nome" %>
+      <%= form.text_field :nome %>
+    </div>
+    
+    <div>
+      <%= form.label :email, "email" %>
+      <%= form.text_field :email %>
+    </div>
+    <div>
+      <%= form.label :habilidades, "habilidades" %>
+      <%= form.text_field :habilidades %>
+    </div>
+    <div>
+      <%= form.submit "Salvar" %>
+    </div>
+  <% end %>
